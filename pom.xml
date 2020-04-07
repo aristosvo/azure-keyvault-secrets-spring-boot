@@ -15,7 +15,7 @@
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
         <jib-maven-plugin.version>2.1.0</jib-maven-plugin.version>
         <image.base>azul/zulu-openjdk-alpine:11</image.base>
-        <image.registry>testmsi.azurecr.io</image.registry>
+        <image.registry>${env.CLUSTERNAME}.azurecr.io</image.registry>
         <image.repository>${project.artifactId}</image.repository>
         <image.tag>example</image.tag>
     </properties>
@@ -30,6 +30,11 @@
             <artifactId>azure-keyvault-secrets-spring-boot-starter</artifactId>
             <version>2.2.4</version>
         </dependency>
+        <dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-storage-blob</artifactId>
+			<version>12.5.0</version>
+		</dependency>
     </dependencies>
 
     <build>
@@ -55,7 +60,7 @@
                                 <image>${image.base}</image>
                             </from>
                             <to>
-                                <image>${image.registry}/${image.registry}:${image.repository}</image>
+                                <image>${image.registry}/${image.repository}:${image.tag}</image>
                             </to>
                             <container>
                                 <jvmFlags>

@@ -1,8 +1,0 @@
-apiVersion: "aadpodidentity.k8s.io/v1"
-kind: AzureIdentity
-metadata:
- name: demo-aad1
-spec:
- type: 0 # Azure ID (1 is SP)
- ResourceID: /subscriptions/6eaaf383-01c1-4431-921c-73577a49128d/resourcegroups/MC_aks-rg_testmsi_westeurope/providers/Microsoft.ManagedIdentity/userAssignedIdentities/demo-aad1
- ClientID: 6b6939ba-71fe-4646-8708-988fd3de495b
