@@ -1,1 +1,1 @@
-# azure-keyvault-secrets-spring-boot
+# azure-msi-spring-boot
